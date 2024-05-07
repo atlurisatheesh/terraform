@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
-  name: "hellow-pod"
+  name: hellow-pod
 spec:
   containers:
     - image: nginx:1.23
