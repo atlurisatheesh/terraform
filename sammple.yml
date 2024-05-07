@@ -7,4 +7,4 @@ spec:
     - image: nginx:1.23
       name: nginx-container
       ports:
-        -containerports: 80
+        - containerports: 82
