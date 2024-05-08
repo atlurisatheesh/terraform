@@ -4,8 +4,8 @@ metadata:
   name: jenkins-deploy
 spec:
    minReadySeconds: 5
-    replicas: 4
-    selector:
+   replicas: 4
+   selector:
     matchLabels:
       app: jenkins
     strategy:
