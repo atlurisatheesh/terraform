@@ -6,20 +6,20 @@ spec:
    minReadySeconds: 5
    replicas: 4
    selector:
-    matchLabels:
-      app: jenkins
-    strategy:
-      type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 30%
-      maxUnavailable: 30%
-    template:
-      metadata:
-        name: jenkins-pod
-        labels:
-          app: jenkins
-          version: 1.651.2
-    spec:
+     matchLabels:
+       app: jenkins
+     strategy:
+       type: RollingUpdate
+     rollingUpdate:
+       maxSurge: 30%
+       maxUnavailable: 30%
+     template:
+       metadata:
+         name: jenkins-pod
+         labels:
+           app: jenkins
+           version: 1.651.2
+     spec:
       containers:
         - name: jenkins
           image: jenkins:1.651.2
