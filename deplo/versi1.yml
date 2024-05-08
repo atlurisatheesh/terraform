@@ -9,7 +9,7 @@ spec:
     matchLabels:
       app: jenkins
     strategy:
-    type: RollingUpdate
+      type: RollingUpdate
     rollingUpdate:
       maxSurge: 30%
       maxUnavailable: 30%
