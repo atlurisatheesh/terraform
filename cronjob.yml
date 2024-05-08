@@ -2,7 +2,7 @@
 apiVersion: batch/v1
 kind: CronJob
 metadata:
-  name: periodicjob
+  name: periodicjob1
 spec:
   schedule: '* * * * *' 
   jobTemplate:
