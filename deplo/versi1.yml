@@ -3,14 +3,14 @@ kind: Deployment
 metadata: 
   name: jenkins-deploy
 spec:
-  matchExpressions: 5
+   minReadySeconds: 5
   replicas: 5
   selector:
     matchLabels:
       app: jenkins
   strategy:
    type: RollingUpdate
-   rollingupdate:
+   rollingUpdate:
     maxSurge: 30%
     maxUnavailable: 30%
   template:
@@ -22,18 +22,18 @@ spec:
     spec:
       containers:
         - name: jenkins
-          version: 1.651.2
+          image: jenkins:1.651.2
       ports:
         - containerPort: 8080
           protocol: TCP
 
 ---
 apiVersion: v1
-kind: service
+kind: Service
 metadata:
   name: jenkins-svc-lb
 spec:
-  type: loadBalancer
+  type: LoadBalancer
   selector:
     app: jenkins
   ports: 
