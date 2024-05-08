@@ -4,16 +4,16 @@ metadata:
   name: jenkins-deploy
 spec:
    minReadySeconds: 5
-  replicas: 5
-  selector:
+    replicas: 4
+    selector:
     matchLabels:
       app: jenkins
-  strategy:
+    strategy:
    type: RollingUpdate
    rollingUpdate:
     maxSurge: 30%
     maxUnavailable: 30%
-  template:
+    template:
     metadata:
       name: jenkins-pod
       labels:
