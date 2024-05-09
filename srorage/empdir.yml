@@ -1,0 +1,21 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-vol
+  labels:
+    app: nginx
+    layer: wb
+spec:
+  containers:
+    - name: nginx
+      image: nginx
+      ports:
+        - containerPort: 80
+      volumeMounts:
+        - name: test-volume
+          mountPath: /var/lib/mysql
+  volumes:
+    - name: test-volume
+      emptyDir:
+        sizeLimit: 100Mi
