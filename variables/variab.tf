@@ -84,3 +84,25 @@ variable "district" {
 output "district" {
   value = var.district
 }
+
+variable "country" {  
+}
+
+output "country" {
+    value = var.country  
+}
+
+variable "state" {  
+}
+
+output "state" {
+  value = var.state
+}
+
+variable "fav_cloud" {  
+}
+
+output "fav_cloud" {
+    value = var.fav_cloud
+  
+}
