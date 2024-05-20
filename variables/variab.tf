@@ -63,3 +63,24 @@ variable "map_list" {
 output "map_list" {
   value = "${var.map_list["dev"]} and ${var.map_list["qa"]} is become ${var.map_list["boolean"]}"
 }
+
+variable "village" {}
+
+output "village" {
+    value = var.village
+  
+}
+
+variable "mandal" {}
+
+output "mandal" {
+    value = var.mandal
+  
+}
+
+variable "district" {  
+}
+
+output "district" {
+  value = var.district
+}
