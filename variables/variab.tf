@@ -92,12 +92,12 @@ output "country" {
     value = var.country  
 }
 
-variable "state" {  
-}
+# variable "state" {  
+# }
 
-output "state" {
-  value = var.state
-}
+# output "state" {
+#   value = var.state
+# }
 
 variable "fav_cloud" {  
 }
