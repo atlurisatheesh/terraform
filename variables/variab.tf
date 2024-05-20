@@ -51,15 +51,15 @@ output "list" {
   value = "${var.list[0]} and ${var.list[1]}"
 }
 
-variable "map_list" {
-  default = {
-    dev = "hello" 
-   number = 255
-   boolean = true
-    qa   = "welcome to terraform"
-  }
-}
+# variable "map_list" {
+#   default = {
+#     dev = "hello" 
+#    number = 255
+#    boolean = true
+#     qa   = "welcome to terraform"
+#   }
+# }
 
-output "map_list" {
-  value = "${var.map_list[dev]} and ${var.map_list[qa]} is become ${var.map_list[boolean]}"
-}
+# output "map_list" {
+#   value = "${var.map_list[dev]} and ${var.map_list[qa]} is become ${var.map_list[boolean]}"
+# }
