@@ -60,6 +60,6 @@ variable "map_list" {
   }
 }
 
-output "map" {
+output "map_list" {
   value = "${var.map_list[dev]} and ${var.map_list[qa]} is become ${var.map_list[boolean]}"
 }
